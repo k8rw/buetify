@@ -18,7 +18,7 @@ COPY . .
 
 # [optional] tests & build
 ENV NODE_ENV=production
-RUN bun run build
+RUN bun build
 
 # release stage
 FROM nginxinc/nginx-unprivileged:alpine-slim AS release
