@@ -19,6 +19,9 @@ jobs:
       -
         name: Checkout
         uses: actions/checkout@v4
+      - 
+        name: Change directory
+        run: cd web
       -
         name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -34,7 +37,5 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          context: web
-          build-contexts: project=web
           platforms: linux/amd64
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/${{ github.event.repository.name }}:latest
