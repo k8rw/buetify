@@ -2,10 +2,9 @@
   "name": "web",
   "version": "0.0.0",
   "scripts": {
-    "dev": "node --no-warnings ./node_modules/.bin/vite",
+    "dev": "vite --mode dev",
     "build": "vite build",
-    "preview": "vite preview",
-    "lint": "eslint . --fix --ignore-path .gitignore"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@iconify/vue": "^4.1.1",
