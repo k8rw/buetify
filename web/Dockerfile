@@ -1,6 +1,6 @@
 # use the official Bun image
 # see all versions at https://hub.docker.com/r/oven/bun/tags
-FROM --platform=linux/amd64 oven/bun AS base
+FROM --platform=linux/amd64 oven/bun:latest AS base
 WORKDIR /usr/src/app
 
 # install dependencies into temp directory
@@ -18,7 +18,7 @@ COPY . .
 
 # [optional] tests & build
 ENV NODE_ENV=production
-RUN bun build
+RUN bun run build
 
 # release stage
 FROM nginxinc/nginx-unprivileged:alpine-slim AS release
