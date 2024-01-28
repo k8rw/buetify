@@ -35,5 +35,6 @@ jobs:
         with:
           push: true
           context: web
+          build-contexts: project=web
           platforms: linux/amd64
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/${{ github.event.repository.name }}:latest
