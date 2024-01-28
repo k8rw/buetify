@@ -13,6 +13,9 @@ import App from './App.vue'
 // Composables
 import { createApp } from 'vue'
 
+// Styles
+import "@/styles/main.scss";
+
 const app = createApp(App)
 
 registerPlugins(app)
