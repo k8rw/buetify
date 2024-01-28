@@ -8,18 +8,15 @@ WORKDIR /usr/src/app
 FROM base AS install
 RUN mkdir -p /temp/prod
 COPY package.json bun.lockb /temp/prod/
-RUN cd /temp/prod && bun install --frozen-lockfile --production
+RUN cd /temp/prod && bun install --frozen-lockfile
 
 # copy node_modules from temp directory
 # then copy all (non-ignored) project files into the image
 FROM base AS prerelease
 COPY --from=install /temp/prod/node_modules node_modules
 COPY . .
-RUN pwd
-RUN ls
 
 # [optional] tests & build
-ENV NODE_ENV=production
 RUN bun run build
 
 # release stage
