@@ -15,6 +15,8 @@ RUN cd /temp/prod && bun install --frozen-lockfile --production
 FROM base AS prerelease
 COPY --from=install /temp/prod/node_modules node_modules
 COPY . .
+RUN pwd
+RUN ls
 
 # [optional] tests & build
 ENV NODE_ENV=production
