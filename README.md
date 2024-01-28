@@ -42,4 +42,16 @@ Then you can check the exported port, it should be `http://localhost:3000/` by d
 > 
 > * If you cannot find the `Panel`, please click the `Status Bar` and then you can see the `PORTS` and `TERMINAL` in `Panel`.
 
+## Add Components
 
+- Install Component
+```
+bun install --save @iconify/vue
+```
+- Import Module
+```html
+<script setup lang="ts">
+import HelloWorld from "./components/HelloWorld.vue";
+import { Icon } from "@iconify/vue";
+</script>
+```
