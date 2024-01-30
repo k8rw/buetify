@@ -53,7 +53,7 @@ import { Icon } from "@iconify/vue";
 import { ref } from "vue"
 const data_vdb = ref([
     {
-        title: "Layers ",
+        title: "Layer ",
         items: [
             {
                 title: "Access layer",
