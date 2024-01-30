@@ -1,12 +1,13 @@
 <template>
-  <v-app-bar flat>
-    <v-app-bar-title>
-      <v-icon icon="mdi-circle-slice-6" />
-      Buetify
-    </v-app-bar-title>
+  <v-app-bar>
+    <v-spacer></v-spacer>
+    <v-divider vertical thickness="2" inset class="ml-5 mr-1"></v-divider>
+    <div class="d-flex">
+      <ToolbarLogin />
+    </div>
   </v-app-bar>
 </template>
 
 <script lang="ts" setup>
-  //
+  import ToolbarLogin from "../toolbar/login.vue";
 </script>

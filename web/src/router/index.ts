@@ -10,6 +10,10 @@ import { createRouter, createWebHistory } from 'vue-router'
 export const routes = [
   {
     path: "/",
+    meta: {
+      requiresAuth: false,
+      layout: "default",
+    },
     component: () =>
     import("@/components/HomePage.vue"),
   } as any,
