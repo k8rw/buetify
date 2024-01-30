@@ -7,10 +7,8 @@
 </template>
 
 <script lang="ts" setup>
-import { computed } from 'vue';
-import { useRoute } from 'vue-router';
-
 import DefaultLayout from "@/layouts/default.vue";
+import UILayout from "@/layouts/ui.vue";
 
 const route = useRoute();
 
@@ -20,10 +18,11 @@ const isRouterLoaded = computed(() => {
 });
 
 const layouts = {
-  default: DefaultLayout
+  default: DefaultLayout,
+  ui: UILayout
 };
 
-type LayoutName = "default" | "ui" | "landing" | "auth" | "error";
+type LayoutName = "default" | "ui";
 
 const currentLayout = computed(() => {
   const layoutName = route.meta.layout as LayoutName;

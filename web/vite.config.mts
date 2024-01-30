@@ -5,6 +5,7 @@ import Vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 import ViteFonts from 'unplugin-fonts/vite'
 import Layouts from 'vite-plugin-vue-layouts'
 import VueRouter from 'unplugin-vue-router/vite'
+import AutoImport from 'unplugin-auto-import/vite'
 
 // Utilities
 import { defineConfig } from 'vite'
@@ -14,6 +15,9 @@ import { fileURLToPath, URL } from 'node:url'
 export default defineConfig({
   plugins: [
     VueRouter(),
+    AutoImport({
+      imports: ["vue", "vue-router", "pinia"],
+    }),
     Layouts(),
     Vue({
       template: { transformAssetUrls },
@@ -28,7 +32,7 @@ export default defineConfig({
     Components(),
     ViteFonts({
       google: {
-        families: [ {
+        families: [{
           name: 'Roboto',
           styles: 'wght@100;300;400;500;700;900',
         }],
