@@ -36,7 +36,7 @@
           </v-avatar>
         </template>
         <v-list-item-subtitle>
-          Login
+          {{ $t("appbar.login") }}
         </v-list-item-subtitle>
       </v-list-item>
     </v-list>

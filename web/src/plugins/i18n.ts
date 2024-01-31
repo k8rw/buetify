@@ -1,6 +1,4 @@
 import { createI18n } from "vue-i18n";
-import locales from "@/configs/locales";
-
 import enMessages from "@/locales/en";
 import zhHansMessages from "@/locales/zhHans";
 
