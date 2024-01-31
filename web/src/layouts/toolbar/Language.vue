@@ -48,5 +48,6 @@ onMounted(() => {
 
 const setLocale = (locale: string) => {
     current.value = locale;
+    theme.setLocalCode(locale)
 };
 </script>
