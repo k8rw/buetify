@@ -14,15 +14,14 @@ const navigation = ref(menus.navigation);
     v-model="theme.mainSidebar"
     id="mainMenu"
   >
-    <!-- ---------------------------------------------- -->
-    <!---Top Area -->
-    <!-- ---------------------------------------------- -->
-    <template v-if="!theme.miniSidebar" v-slot:prepend>
-      <v-card
-        style="box-shadow: rgba(0, 0, 0, 0.05) 0px 25px 15px -20px"
-        height="100"
-        class="d-flex align-center justify-center"
-      >
+    <template v-slot:prepend>
+        <v-card height="60" class="ma-1 d-flex align-center justify-center">
+          <v-card-title :style="{ background: 'linear-gradient(to right, ' +
+          $vuetify.theme.themes.light.colors.primary + ', ' + 
+          $vuetify.theme.themes.light.colors.background + ')',
+          '-webkit-background-clip': 'text', 'color': 'transparent' }">
+      K8RW / Buetify
+    </v-card-title>
       </v-card>
     </template>
     <main-menu :menu="navigation.menu"></main-menu>

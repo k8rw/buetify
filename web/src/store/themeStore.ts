@@ -3,6 +3,7 @@ import { defineStore } from "pinia";
 interface State {
   mainSidebar: boolean;
   darkTheme: boolean;
+  localCode: string;
 }
 
 export const useThemeStore = defineStore({
@@ -10,6 +11,7 @@ export const useThemeStore = defineStore({
   state: (): State => ({
     mainSidebar: true,
     darkTheme: false,
+    localCode: "en",
   }),
 
   persist: {
@@ -17,11 +19,15 @@ export const useThemeStore = defineStore({
     strategies: [
       {
         storage: localStorage,
-        paths: ["darkTheme", "mainSidebar"],
+        paths: ["darkTheme", "mainSidebar", "localCode"],
       },
     ],
   },
 
   getters: {},
-  actions: {},
+  actions: {
+    setLocalCode(localCode: string) {
+      this.localCode = localCode;
+    },
+  },
 });

@@ -2,11 +2,10 @@ import { createI18n } from "vue-i18n";
 import enMessages from "@/locales/en";
 import zhHansMessages from "@/locales/zhHans";
 
-
 const messages = {
-    en: enMessages,
-    zhHans: zhHansMessages,
-  };
+  en: enMessages,
+  zhHans: zhHansMessages,
+};
 
 const i18n = createI18n({
   legacy: false,

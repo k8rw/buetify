@@ -1,5 +1,9 @@
 export default {
-    appbar: {
-        login: "login",
-      },
+  appbar: {
+    login: "login",
+    logout: "logout",
+  },
+  menu: {
+    dashboard: "Dashboard",
+  },
 };

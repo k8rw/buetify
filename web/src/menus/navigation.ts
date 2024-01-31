@@ -6,7 +6,7 @@ export default {
       key: "",
       items: [
         {
-          key: "DashBoard",
+          key: "menu.dashboard",
           text: "Dashboard",
           link: "/dashboard",
           icon: "mdi-view-dashboard-outline",

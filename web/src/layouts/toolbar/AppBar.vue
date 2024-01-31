@@ -4,13 +4,15 @@
         <v-spacer></v-spacer>
         <v-divider vertical thickness="2" inset class="ml-5 mr-1"></v-divider>
         <div class="d-flex">
-            <ToolbarLogin />
+            <ToolbarLanguage />
+            <ToolbarLogout />
         </div>
     </v-app-bar>
 </template>
   
 <script lang="ts" setup>
-import ToolbarLogin from "../toolbar/login.vue";
+import ToolbarLogout from "../toolbar/Logout.vue";
+import ToolbarLanguage from "../toolbar/Language.vue";
 import { useThemeStore } from "@/store/themeStore";
 const theme = useThemeStore();
 </script>

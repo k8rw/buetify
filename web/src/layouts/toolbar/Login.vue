@@ -18,26 +18,24 @@
     <!-- ---------------------------------------------- -->
     <!-- Logout Area -->
     <!-- ---------------------------------------------- -->
-    <v-list density="compact">
-      <v-list-item link href="https://github.com/k8rw/buetify">
+    <v-list density="compact" nav>
+      <v-list-item link href="https://github.com/k8rw/buetify" target="_blank">
         <template v-slot:prepend>
-          <v-avatar size="30">
-            <v-icon>mdi-github</v-icon>
-          </v-avatar>
-        </template>
-        <v-list-item-subtitle>
+            <v-avatar size="20" rounded="0" icon="mdi-github">
+            </v-avatar>
+          </template>
+        <v-list-item-title>
           Github
-        </v-list-item-subtitle>
+        </v-list-item-title>
       </v-list-item>
       <v-list-item link to="/dashboard">
         <template v-slot:prepend>
-          <v-avatar size="30">
-            <v-icon>mdi-login</v-icon>
-          </v-avatar>
-        </template>
-        <v-list-item-subtitle>
+            <v-avatar size="20" rounded="0" icon="mdi-login">
+            </v-avatar>
+          </template>
+        <v-list-item-title>
           {{ $t("appbar.login") }}
-        </v-list-item-subtitle>
+        </v-list-item-title>
       </v-list-item>
     </v-list>
 

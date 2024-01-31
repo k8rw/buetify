@@ -12,6 +12,9 @@ import type { ThemeDefinition } from "vuetify";
 
 // Composables
 import { createVuetify } from 'vuetify'
+import { createVueI18nAdapter } from "vuetify/locale/adapters/vue-i18n";
+import { useI18n } from "vue-i18n";
+import i18n from "@/plugins/i18n";
 
 const LightTheme: ThemeDefinition = {
   dark: false,
@@ -55,5 +58,8 @@ export default createVuetify({
       light: LightTheme,
       dark: DarkTheme,
     },
+  },
+  locale: {
+    adapter: createVueI18nAdapter({ i18n, useI18n }),
   },
 })
