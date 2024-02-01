@@ -1,10 +1,10 @@
 // Plugins
-import Components from 'unplugin-vue-components/vite'
 import Vue from '@vitejs/plugin-vue'
 import Vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
-import ViteFonts from 'unplugin-fonts/vite'
-import Layouts from 'vite-plugin-vue-layouts'
-import VueRouter from 'unplugin-vue-router/vite'
+import Layouts    from 'vite-plugin-vue-layouts'
+import ViteFonts  from 'unplugin-fonts/vite'
+import VueRouter  from 'unplugin-vue-router/vite'
+import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 
 // Utilities
@@ -33,7 +33,7 @@ export default defineConfig({
     ViteFonts({
       google: {
         families: [{
-          name: 'Roboto',
+          name: 'Quicksand',
           styles: 'wght@100;300;400;500;700;900',
         }],
       },
