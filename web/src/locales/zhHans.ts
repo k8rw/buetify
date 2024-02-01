@@ -4,6 +4,6 @@ export default {
     logout: "登出",
   },
   menu: {
-    dashboard: "控制面板",
+    dashboard: "仪表面板",
   },
 };
