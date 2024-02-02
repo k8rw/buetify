@@ -19,10 +19,11 @@
     </v-menu>
 </template>
 <script setup lang="ts">
+import { ref, onMounted } from 'vue'
+
 import { Icon } from "@iconify/vue";
 import { useLocale } from "vuetify";
 import { useThemeStore } from "@/store/themeStore";
-import i18n from "@/plugins/i18n";
 
 const { current } = useLocale();
 const theme = useThemeStore();

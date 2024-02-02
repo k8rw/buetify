@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import menus from "@/menus";
 import MainMenu from "@/components/navigation/MainMenu.vue";
 import { useThemeStore } from "@/store/themeStore";

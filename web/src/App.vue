@@ -7,6 +7,9 @@
 </template>
 
 <script lang="ts" setup>
+import { useRoute } from 'vue-router'
+import { computed } from 'vue'
+
 import DefaultLayout from "@/layouts/default.vue";
 import UILayout from "@/layouts/ui.vue";
 

@@ -12,6 +12,7 @@ import App from './App.vue'
 
 // Composables
 import { createApp } from 'vue'
+import { createPinia } from 'pinia'
 import piniaPersist from "pinia-plugin-persist";
 import Vue3Lottie from "vue3-lottie";
 
