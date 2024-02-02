@@ -25,6 +25,12 @@ export const routes = [
     },
     component: () => import("@/pages/dashboard.vue"),
   },
+  {
+    path: "/:pathMatch(.*)",
+    redirect: "/",
+    name: "notMatch",
+    hidden: true
+  },
 ];
 
 const router = createRouter({
