@@ -23,7 +23,7 @@ RUN bun run build
 # release stage
 FROM nginxinc/nginx-unprivileged:alpine-slim AS release
 COPY --from=prerelease /usr/src/app/dist /usr/share/nginx/html
-RUN sed -i "/^location / {/a \        try_files \$uri \$uri/ /index.html;\n" /etc/nginx/conf.d/default.conf \
+RUN sed -i "/^location \/ {/a \        try_files \$uri \$uri/ /index.html;\n" /etc/nginx/conf.d/default.conf \
     && cat /etc/nginx/conf.d/default.conf
 EXPOSE 8080
 CMD ["nginx", "-g", "daemon off;"]
