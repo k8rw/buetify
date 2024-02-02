@@ -23,5 +23,6 @@ RUN bun run build
 # release stage
 FROM nginxinc/nginx-unprivileged:alpine-slim AS release
 COPY --from=prerelease /usr/src/app/dist /usr/share/nginx/html
+RUN cat /etc/nginx/nginx.conf
 EXPOSE 8080
 CMD ["nginx", "-g", "daemon off;"]
