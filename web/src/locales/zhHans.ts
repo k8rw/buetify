@@ -6,4 +6,7 @@ export default {
   menu: {
     dashboard: "仪表面板",
   },
+  error: {
+    back: "返回主页",
+  }
 };

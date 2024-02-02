@@ -6,4 +6,7 @@ export default {
   menu: {
     dashboard: "Dashboard",
   },
+  error: {
+    back: "Back to Home",
+  }
 };

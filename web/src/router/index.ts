@@ -26,8 +26,16 @@ export const routes = [
     component: () => import("@/pages/dashboard.vue"),
   },
   {
+    path: "/404",
+    meta: {
+      requiresAuth: false,
+      layout: "default",
+    },
+    component: () => import("@/pages/error/404.vue"),
+  },
+  {
     path: "/:pathMatch(.*)",
-    redirect: "/",
+    redirect: "/404",
     name: "notMatch",
     hidden: true
   },
