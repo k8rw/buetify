@@ -55,3 +55,15 @@ import HelloWorld from "./components/HelloWorld.vue";
 import { Icon } from "@iconify/vue";
 </script>
 ```
+
+## Update Components
+
+- Use [npm-check-updates](https://www.npmjs.com/package/npm-check-updates)
+```
+bun x npm-check-updates -ui
+```
+
+- For update in workspaces and even root
+```
+bun x npm-check-updates -ui -ws --root
+```
